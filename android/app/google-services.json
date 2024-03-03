@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "199879290891",
+    "project_id": "internship-raion-e234a",
+    "storage_bucket": "internship-raion-e234a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199879290891:android:c3625003e05336a180d70e",
+        "android_client_info": {
+          "package_name": "com.example.internship_raion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe2u8fd1KUcrt4ljrE_58hRql9tY6DVIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

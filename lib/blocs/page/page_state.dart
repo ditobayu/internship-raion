@@ -22,6 +22,11 @@ final class OnLoginPage extends PageState {
   List<Object> get props => [];
 }
 
+final class OnRegisterPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
 final class OnSplashPage extends PageState {
   @override
   List<Object> get props => [];

@@ -12,15 +12,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
   CarouselController carouselController = CarouselController();
 
   List<String> titles = [
-    "Grow Your\nFinancial Today",
-    "Build From\nZero to Freedom",
-    "Start Together",
-  ];
-
-  List<String> subTitles = [
-    "lorem lorem lorem you to\nlorem goal",
-    "lorem lorem lorem lorem to\nget all the benefits",
-    "lorem lorem lorem from\nzero with our system",
+    "Informasi seputar FILKOM, mulai dari akademik sampai non akademik",
+    "Fitur CRUD (Create, Read, Update, dan Delete) ",
+    "Diskusikan informasi yang telah diinputkan oleh user",
+    "All your information",
   ];
 
   @override
@@ -32,6 +27,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
           children: [
             CarouselSlider(
               items: [
+                Image.asset(
+                  "assets/img_onboarding1.png",
+                  height: 331,
+                ),
                 Image.asset(
                   "assets/img_onboarding3.png",
                   height: 331,
@@ -69,27 +68,28 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     titles[currentIndex],
                     style: blackTextStyle.copyWith(
                         fontSize: 20, fontWeight: semiBold),
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.start,
                   ),
-                  const SizedBox(
-                    height: 26,
-                  ),
-                  Text(
-                    subTitles[currentIndex],
-                    style: greyTextStyle.copyWith(
-                      fontSize: 16,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
+                  // const SizedBox(
+                  //   height: 26,
+                  // ),
+                  // Text(
+                  //   subTitles[currentIndex],
+                  //   style: greyTextStyle.copyWith(
+                  //     fontSize: 16,
+                  //   ),
+                  //   textAlign: TextAlign.center,
+                  // ),
                   SizedBox(
                     height: currentIndex == 2 ? 38 : 50,
                   ),
-                  currentIndex == 2
+                  currentIndex == 3
                       ? Column(
                           children: [
                             CustomFilledButton(
@@ -106,7 +106,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
                               title: "Daftar",
                               backgroundColor: orangeColor,
                               onPressed: () {
-                                context.read<PageBloc>().add(GoToLoginPage());
+                                context
+                                    .read<PageBloc>()
+                                    .add(GoToRegisterPage());
                               },
                             )
                           ],

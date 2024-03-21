@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:internship_raion/blocs/blocs.dart';
 import 'package:internship_raion/blocs/page/page_bloc.dart';
@@ -14,6 +16,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 part "sign_in_page.dart";
+part "sign_up_page.dart";
 part "main_page.dart";
 part "wrapper.dart";
 part "splash_page.dart";

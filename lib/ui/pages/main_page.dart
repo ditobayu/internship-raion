@@ -30,7 +30,7 @@ class _MainPageState extends State<MainPage> {
             ),
             ElevatedButton(
               onPressed: () async {
-                await AuthServices.signOut();
+                await AuthServices.signOut(context);
               },
               child: const Text("Sign Out"),
             ),

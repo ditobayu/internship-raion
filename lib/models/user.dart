@@ -8,22 +8,28 @@ class User extends Equatable {
   final String role;
   final String profilePicture;
 
-  const User({required this.id, required this.email,
-       required this.name,
-       required this.profilePicture,
-       required this.role,
-       required this.username});
+  const User(
+      {required this.id,
+      required this.email,
+      required this.name,
+      required this.profilePicture,
+      required this.role,
+      required this.username});
 
-       @override
+  @override
   String toString() {
-    // TODO: implement toString
     return "[$id] - $username, $email";
+  }
+
+  String getId() {
+    return id;
   }
 
   @override
   List<Object> get props => [id, username, email, name, role, profilePicture];
 
-   static User fromFirebaseUser(auth.UserCredential userCredential, String role, String name) {
+  static User fromFirebaseUser(
+      auth.UserCredential userCredential, String role, String name) {
     return User(
       id: userCredential.user!.uid,
       email: userCredential.user!.email!,
@@ -32,10 +38,10 @@ class User extends Equatable {
       role: role,
       username: name,
     );
-
   }
-    static Future<User> fromFireStore(String id)  => UserServices.getUser(id);
-  
+
+  static Future<User> fromFireStore(String id) => UserServices.getUser(id);
+
   // User copyWith({String name, String profilePicture, List<String> selectedGenres, s selectedLanguage, int balance}) => User(this.id, this.email,
   //     name: name ?? this.name,
   //     profilePicture: profilePicture ?? this.profilePicture,
